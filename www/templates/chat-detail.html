@@ -4,11 +4,29 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{chat.name}}">
+<ion-view view-title="detail">
   <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+        <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+        <h2>{{chat.name}}</h2>
+        <p>
+          {{chat.lastText}}
+        </p>
+      </ion-item>
+    </ion-list>
+    <br>
+
+    <div class="card" style="padding: 20px">
+      <p>Origo is designed to help everyone make interactive prototypes and turn them
+        into real apps which supports all platforms including web, iOS, Android and Windows Phone.
+        Origo is built with ionic, an advanced web framework. Our innovative team members made it
+        to make good use of ionic and succeeded in rendering Origo a fantastic productive tool.
+      </p>
+      <p>
+        welcome to Origo. For detail, please click
+        <a href="http://clover.fduss.com">http://clover.fduss.com/</a>
+      </p>
+    </div>
   </ion-content>
 </ion-view>
