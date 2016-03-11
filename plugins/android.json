@@ -1,0 +1,26 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"IndoorMap\"><param name=\"android-package\" value=\"com.fduss.clover.plugin.IndoorMapPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.fduss.clover.map": {
+            "PACKAGE_NAME": "com.ionicframework.app2892108"
+        }
+    },
+    "dependent_plugins": {}
+}

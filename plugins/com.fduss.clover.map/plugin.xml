@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="com.fduss.clover.map" version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>IndoorMap</name>
+  <description>Description</description>
+  <js-module name="ExtraInfo" src="www/IndoorMap.js">
+    <clobbers target="cordova.plugins.IndoorMap"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="IndoorMap">
+        <param name="android-package" value="com.fduss.clover.plugin.IndoorMapPlugin"/>
+      </feature>
+    </config-file>
+    <source-file src="src/com/ionicframework/app2892108/MapActivity.java" target-dir="src/com/ionicframework/app2892108"/>
+    <source-file src="src/com/fduss/clover/plugin/IndoorMapPlugin.java" target-dir="src/com/fduss/clover/plugin"/>
+    <source-file src="res/menu/map.xml" target-dir="res/menu"/>
+  </platform>
+</plugin>
