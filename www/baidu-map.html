@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Map</title>
+  <style type="text/css">
+    html {
+      height: 100%
+    }
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+    #container {
+      height: 100%
+    }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pSY6ZqLs3gFaTmt02WU5GTWG"></script>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+  <body>
+    <div class="bar bar-header bar-light">
+        <a href="index.html#tap/inbox">
+          <button class="button button-clear button-icon ion-arrow-left-a back-button"></button>
+        </a>
+    </div>
+    <div id="container"></div>
+    <script type="text/javascript">
+      // 百度地图API功能
+      var map = new BMap.Map("container");
+      map.centerAndZoom("复旦大学张江校区软件楼",30);      // 初始化地图,用城市名设置地图中心点
+      map.enableDragging();
+      map.enableScrollWheelZoom(true);
+
+//      121.605932, 31.1972
+      var point = new BMap.Point(121.605932, 31.1972);
+      var marker = new BMap.Marker(point); // 创建点
+      map.addOverlay(marker);    //增加点
+      marker.addEventListener("click",detail);
+
+      //室内定位
+      function detail(e) {
+        //console.log(e.point.lng + ", " + e.point.lat);
+      }
+    </script>
+  </body>
+</html>

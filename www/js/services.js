@@ -15,6 +15,7 @@ angular.module('starter.services', [])
     lastText: 'Origo',
     face: 'img/Origo.png'
   }, {
+    id: 2,
     name: 'Origo',
     lastText: 'Origo',
     face: 'img/Origo.png'

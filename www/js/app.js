@@ -74,6 +74,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('map', {
+      url: '/map',
+      views: {
+        templateUrl: 'templates/baidu-map.html',
+        controller: 'MapCtrl'
+      }
+    })
+
   .state('tab.outbox', {
       url: '/outbox',
       views: {
