@@ -3,6 +3,6 @@
  */
 var exec = require('cordova/exec');
 
-exports.indoorMap = function() {
+exports.openMap = function() {
   exec(null, null, "IndoorMap", null, []);
 };

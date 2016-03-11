@@ -4,6 +4,8 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Map</title>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <style type="text/css">
     html {
       height: 100%
@@ -17,9 +19,12 @@
       height: 100%
     }
   </style>
+  <!--baidu-map api-->
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pSY6ZqLs3gFaTmt02WU5GTWG"></script>
-  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
 </head>
 
   <body>
@@ -44,7 +49,11 @@
 
       //室内定位
       function detail(e) {
-        //console.log(e.point.lng + ", " + e.point.lat);
+        var p = e.target;
+        alert("marker的位置是" + p.getPosition().lng + "," + p.getPosition().lat);
+//        cordova.exec(null, null, "IndoorMap", null, []);
+        var indoorMap = cordova.require("com.fduss.clover.map.IndoorMap");
+        indoorMap.openMap();
       }
     </script>
   </body>

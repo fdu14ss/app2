@@ -13,8 +13,32 @@
         <param name="android-package" value="com.fduss.clover.plugin.IndoorMapPlugin"/>
       </feature>
     </config-file>
+
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.BLUETOOTH"/>
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    </config-file>
+
+    <config-file parent="application" target="AndroidManifest.xml">
+      <activity android:label="title_activity_indoor_map" android:name=".MapActivity"></activity>
+
+      <meta-data android:name="ids_key" android:value="2AD3C846C3BE52FF562F863F8270F021"/>
+    </config-file>
+
     <source-file src="src/com/ionicframework/app2892108/MapActivity.java" target-dir="src/com/ionicframework/app2892108"/>
     <source-file src="src/com/fduss/clover/plugin/IndoorMapPlugin.java" target-dir="src/com/fduss/clover/plugin"/>
     <source-file src="res/menu/map.xml" target-dir="res/menu"/>
+
+    <source-file src="libs/idslibmp.jar" target-dir="libs"/>
+    <source-file src="libs/idslibcm.jar" target-dir="libs"/>
+    <source-file src="libs/idsliblo.jar" target-dir="libs"/>
+    <source-file src="libs/armeabi-v7a/libidsnative_c.so" target-dir="libs/armeabi-v7a"/>
+    <source-file src="libs/armeabi-v7a/libidsnative_l.so" target-dir="libs/armeabi-v7a"/>
   </platform>
 </plugin>
