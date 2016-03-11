@@ -21,8 +21,6 @@
   </style>
   <!--baidu-map api-->
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pSY6ZqLs3gFaTmt02WU5GTWG"></script>
-  <!-- ionic/angularjs js -->
-  <script src="lib/ionic/js/ionic.bundle.js"></script>
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
 </head>
@@ -51,9 +49,9 @@
       function detail(e) {
         var p = e.target;
         alert("marker的位置是" + p.getPosition().lng + "," + p.getPosition().lat);
-//        cordova.exec(null, null, "IndoorMap", null, []);
-        var indoorMap = cordova.require("com.fduss.clover.map.IndoorMap");
-        indoorMap.openMap();
+        cordova.exec(null, null, "IndoorMap", null, []);
+//        var indoorMap = cordova.require("com.fduss.clover.map.IndoorMap");
+//        indoorMap.openMap();
       }
     </script>
   </body>
